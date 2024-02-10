@@ -1,0 +1,275 @@
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html, body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+:root {
+  --text-color: #1E1E1E;
+  --font-main: "Open Sans", sans-serif;
+}
+
+.modal__container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  outline: none;
+  border-radius: 7px;
+}
+
+.modal_title {
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.form_container {
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_box {
+  padding: 6px 0;
+}
+
+label {
+  font-weight: 700;
+}
+
+input {
+  margin: 6px;
+  width: 100%;
+  border: none;
+  height: 40px;
+  background: transparent;
+  padding: 10px;
+  border-radius: 15px;
+  border-bottom: 1px solid grey;
+}
+input::-moz-placeholder {
+  opacity: 0.4;
+  font-size: 18px;
+  color: var(--text-color);
+}
+input::placeholder {
+  opacity: 0.4;
+  font-size: 18px;
+  color: var(--text-color);
+}
+input:focus {
+  outline: none;
+}
+input._error {
+  border: none;
+  box-shadow: red 0px 5px 10px;
+}
+
+.text_box {
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  border: 1px solid black;
+  margin: 10px 0;
+  background: transparent;
+  border-radius: 15px;
+  color: #464040;
+  padding: 20px;
+}
+textarea:focus {
+  outline: none;
+}
+textarea._error {
+  border: none;
+  box-shadow: red 0px 5px 10px;
+}
+
+.error_text {
+  font-size: 10px;
+  color: red;
+}
+
+.btn__submit {
+  margin-top: 10px;
+  padding: 10px;
+  align-self: flex-end;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.btn__submit:hover {
+  background-color: aliceblue;
+  opacity: 0.8;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_box {
+  z-index: 5;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  height: 300px;
+  padding: 40px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text_success {
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.btn__next {
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+.btn__next:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=main.css.map */

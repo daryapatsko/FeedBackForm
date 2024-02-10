@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./scss/main.css" />
+		<title>FeedBack</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="modal__container">
+				<div class="modal_title">Отправьте нам сообщение</div>
+
+				<div class="form_container">
+					<form action="#" id="form">
+						<div class="input_box">
+							<label for="name">Ваше имя:</label>
+							<input type="text" placeholder="Введите имя" name="name" class="name _req"/>
+                    	</div>
+						<div class="input_box">
+							<label for="email">Ваш Email:</label>
+							<input type="email" placeholder="Введите email" name="email" class="_email _req"/>
+                           
+						</div>
+						<div class="input_box">
+							<label for="phone">Ваш номер телефона:</label>
+							<input type="text" placeholder="+375(__)___-__-__" name="phone" id="phone" class="phone _req" />
+						</div>
+						<div class="text_box">
+							<label for="message">Введите ваше сообщение:</label>
+							<textarea name="" rows="5" class="message _req"></textarea>
+						</div>
+                        <button type="submit" class="btn__submit" id="button">Отправить</button>
+					</form>
+				</div>
+			</div>
+			<div id="modal" class="modal">
+				<div class="modal_box">
+					<div class="modal_content">
+						<p class="text_success">Вы успешно зарегистрировались!</p>
+						<button class="btn__next">Продолжить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="../dist/bundle.js"></script>
+        <script src="./../server/index.js"></script>
+	</body>
+</html>
